@@ -45,13 +45,17 @@
 			.navbar-collapse {
 				flex-grow: 0;
 			}
-			.hero-bg {
+			.animate {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
 				height: 100vh;
-				background: url('img/herobg.png') no-repeat center;
+				animation: fadeIn  1s ease-in;
+			}
+			.hero-bg {
+				background: #1A4889 url('img/stf.jpeg') no-repeat center;
 				background-size: cover;
+				background-blend-mode: soft-light;
 			}
 			.main-content {
 				flex: 1;
@@ -73,73 +77,81 @@
 				height: 20px;
 				width: 2px;
 				background-color: rgba(255,255,255,0.25);
-		}
+			}
+			@keyframes fadeIn {
+				0% {	
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<div class="wrapper hero-bg">
+			<div class="animate">
+				<nav class="navbar navbar-expand-xl navbar-light">
+					<div class="container-fluid">
 
-			<nav class="navbar navbar-expand-xl navbar-light">
-				<div class="container-fluid">
+						<a class="navbar-brand" href="#">
+							<img src="img/logo_br.svg" alt="Guimarães e Teixeira Advogados Associados" width="240" height="116">
+						</a>
 
-					<a class="navbar-brand" href="#">
-						<img src="img/logo_br.svg" alt="Guimarães e Teixeira Advogados Associados" width="240" height="116">
-					</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic" aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
 
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic" aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+						<div class="collapse navbar-collapse show" id="navbarBasic">
+							<ul class="navbar-nav me-auto mb-2 mb-xl-0">
+								<li class="nav-item">
+									<a class="nav-link" aria-current="page" href="escritorio.html">O Escritório</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="advogados.html">Advogados</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="areas.html">Áreas de Atuação</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="contato.html">Contato</a>
+								</li>
+							</ul>
+						</div>
 
-					<div class="collapse navbar-collapse show" id="navbarBasic">
-						<ul class="navbar-nav me-auto mb-2 mb-xl-0">
-							<li class="nav-item">
-								<a class="nav-link" aria-current="page" href="escritorio.html">O Escritório</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="advogados.html">Advogados</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="areas.html">Áreas de Atuação</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="contato.html">Contato</a>
-							</li>
-						</ul>
 					</div>
+				</nav>
 
-				</div>
-			</nav>
+				<main class="main-content">
+					<div class="headline-lg">
+						<p>Direito Sanitário e Médico,<br>com expertise regulatória<br>e compromisso ético.</p>
+					</div>
+				</main>
 
-			<main class="main-content">
-				<div class="headline-lg">
-					<p>Direito Sanitário e Médico,<br>com expertise regulatória<br>e compromisso ético.</p>
-				</div>
-			</main>
+				<footer class="contact-footer">
+					<div class="content">
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="left">
+								<div class="d-flex align-items-center" style="gap:8px">
+									<i class="bi bi-telephone-fill"></i>
+									<span class="phone-number">+55 61 3879 1201</span>
+								</div>
+							</div>
+							<div class="right">
+								<div class="d-flex align-items-center" style="gap:8px">
+									<i class="bi bi-envelope-fill"></i>
 
-			<footer class="contact-footer">
-				<div class="content">
-					<div class="d-flex justify-content-between align-items-center">
-						<div class="left">
-							<div class="d-flex align-items-center" style="gap:8px">
-								<i class="bi bi-telephone-fill"></i>
-								<span class="phone-number">+55 61 3879 1201</span>
+									<span class="e-mail d-flex justify-content-center align-items-center" style="gap: 8px">
+										<a href="mailto:" class="mail">carlos@gteadv.com</a>
+										<div class="divider"></div>
+										<a href="mailto:" class="mail">alex@gteadv.com</a>
+									</span>
+								</div>
 							</div>
 						</div>
-						<div class="right">
-							<div class="d-flex align-items-center" style="gap:8px">
-								<i class="bi bi-envelope-fill"></i>
-
-								<span class="e-mail d-flex justify-content-center align-items-center" style="gap: 8px">
-									<a href="mailto:" class="mail">carlos@gteadv.com</a>
-									<div class="divider"></div>
-									<a href="mailto:" class="mail">alex@gteadv.com</a>
-								</span>
-							</div>
-						</div>
 					</div>
-				</div>
-			</footer>
-
+				</footer>
+			</div>
 		</div>
 		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" async defer></script>
