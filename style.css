@@ -150,8 +150,7 @@ header {
 }
 
 .top-img.contato {
-	background: var(--blue) url(img/contato.png) no-repeat center;
-	background-size: cover;
+	background-color: var(--blue);
 	background-blend-mode: screen;
 }
 
