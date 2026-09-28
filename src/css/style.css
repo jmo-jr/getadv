@@ -13,7 +13,7 @@
   --goldlt: #e9c48e;
   --bg: var(--paper);
   --serif: "Cormorant Garamond", "Times New Roman", serif;
-  --sans: Inter, system-ui, sans-serif;
+  --sans: Lato, system-ui, sans-serif;
   box-sizing: border-box;
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -50,8 +50,13 @@ body {
   margin: 0;
   color: var(--paper);
   font-family: var(--sans);
+	font-size: 20px;
   font-weight: 300;
   line-height: 1.5;
+}
+
+h1, h2, h3 {
+	color: var(--navy);
 }
 
 a {
@@ -87,19 +92,24 @@ header {
 .headline-xl {
 	font-family: var(--serif);
 	font-size: 40px;
+	font-weight: 600;
 	margin-bottom: 24px;
 }
 .headline-lg {
 	font-family: var(--serif);
 	font-size: 34px;
+	font-weight: 600;
+	margin: 24px 0;
 }
 .headline-md {
 	font-family: var(--serif);
 	font-size: 24px;
+	font-weight: 600;
 }
 .headline-sm {
 	font-family: var(--serif);
 	font-size: 20px;
+	font-weight: 600;
 }
 
 .logo {
@@ -136,7 +146,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 28px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -149,7 +159,7 @@ nav a:hover {
   align-items: center;
   gap: 12px;
   padding: 12px 16px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   border: 1px solid transparent;
 	border-radius: 4px;
@@ -181,7 +191,7 @@ nav a:hover {
   min-height: 570px;
   color: #fff;
 	background-color: var(--navy2);
-	background-image: url(/img/congresso.jpg);
+	background-image: url(/img/congresso-entardecer.png);
 	background-repeat: no-repeat;
 	background-size: cover;
   overflow: hidden;
@@ -199,12 +209,7 @@ nav a:hover {
 .hero .shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(8, 17, 31, 0.78) 0%,
-    rgba(8, 17, 31, 0.35) 50%,
-    transparent 75%
-  );
+  background: linear-gradient(90deg, rgb(2 14 34 / 100%) 0%, rgba(8, 17, 31, 0.35) 40%, transparent 75%);
 }
 
 .hero .in {
@@ -231,13 +236,14 @@ nav a:hover {
   background: #fff8;
 }
 
-h1 {
+h1.page-title {
   font-family: var(--serif);
   font-weight: 500;
   font-size: clamp(46px, 6.2vw, 80px);
   line-height: 1;
   margin: 0 0 22px;
   letter-spacing: -0.01em;
+	color: white;
 }
 
 .hero p.lead {
@@ -445,8 +451,24 @@ h1 {
 .main-content {
 	flex: 1;
 	min-height: calc(100vh - 229px);
-	padding: 24px;
+	padding: 0 0 32px;
+	animation: fadeIn 1s ease-in;
 }
+
+.inner-header {
+	background: var(--navy) url(/img/advogados.png) no-repeat right 30%;
+	background-size: cover;
+	background-blend-mode: difference;
+	padding: 40px 0;
+	margin-bottom: 24px;
+
+	& h2 {
+		color: white;
+		margin-bottom: 0;
+		animation: slideIn 1.5s ease;
+	}
+}
+
 .image-container {
 	width: 50%
 }
@@ -512,10 +534,24 @@ h1 {
 }
 
 .selos {
-    margin-top: 40px;
-    width: 180px;
     display: flex;
-    flex-direction: column;
+		justify-content: center;
+		width: 70%;
+    margin: 40px auto 0;
+    gap: 24px;
+
+		& img {
+			width: 25%;
+		}
+}
+
+.photo {
+	border: solid 2px var(--gold);
+	align-self: flex-start;
+
+	& img {
+		width: 300px;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -591,5 +627,16 @@ h1 {
   }
 	100% {
     opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {	
+    opacity: 0;
+		transform: translateX(40px);
+  }
+	100% {
+    opacity: 1;
+		transform: translateX(0);
   }
 }
