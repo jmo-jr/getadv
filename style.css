@@ -154,23 +154,34 @@ header {
 	background-blend-mode: screen;
 }
 
+#excelencia {
+    margin-top: 40px;
+}
+
+.selos {
+    margin-top: 40px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
 @media screen and (max-width: 768px) {
 
 	.nav-link {
-    text-align: center;
+        text-align: center;
 	}
 
 	.navbar {
-			padding: 8px 16px;
+		padding: 8px 16px;
 	}
 
 	.top-img {
-			width: 100%;
-			height: 200px;
+		width: 100%;
+		height: 200px;
 	}
 
 	.main-content {
-			padding: 24px 16px;
+		padding: 24px 16px;
 	}
 
 	.image-container {
@@ -182,30 +193,40 @@ header {
 	}
 	
 	.image-container.second {
-    margin-bottom: 20px;
+        margin-bottom: 20px;
 	}
 
 	.copy, .footer-logo {
-			width: 100%;
+		width: 100%;
 	}
 
 	.main-footer {
-    padding: 30px;
+        padding: 30px;
 	}
 
 	.footer-logo {
-			text-align: center;
+		text-align: center;
 	}
 
 	.copy {
-			text-align: center;
-			margin-bottom: 32px;
+		text-align: center;
+		margin-bottom: 32px;
 	}
 
 	.change-mobile {
 		justify-content: center;
-    gap: 4px;
-    margin-top: 24px;
+        gap: 4px;
+        margin-top: 24px;
+	}
+	
+	#excelencia {
+        margin-top: 0;
+    }
+	
+	.selos {
+        flex-direction: row;
+        margin-top: 0;
+        width: 100%;
 	}
 
 }

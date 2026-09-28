@@ -1,0 +1,17 @@
+{
+  "nome": "Guimarães e Teixeira Advogados Associados",
+  "telefone": "+55 61 3879 1201",
+	"mail": {
+		"carlos": "carlos@gteadv.com",
+		"alex": "alex@gteadv.com"
+	},
+	"enderecos": {
+		"matriz": "SHIS QI 7, Bloco E, Salas 201/203, Lago Sul - Brasília/DF - CEP 71615-750",
+		"filial": "Rua 20, nº 996, Setor Central - Goiania/GO - CEP 74020-170"
+	},
+  "menu": [
+    { "texto": "O Escritório", "url": "/escritorio/" },
+    { "texto": "Áreas de Atuação", "url": "/areas/" },
+    { "texto": "Equipe", "url": "/equipe/" }
+  ]
+}

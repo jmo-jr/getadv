@@ -1,0 +1,13 @@
+<header>
+	<a class="logo" href="/" aria-label="Guimarães e Teixeira Advogados">
+		<img src="/img/simbolo-gt.svg" alt="GT" width="60">
+		<span><b>GUIMARÃES E TEIXEIRA</b>
+		<small>ADVOGADOS ASSOCIADOS</small></span>
+	</a>
+	<nav>
+		{% for item in site.menu %}
+			<a href="{{ item.url }}">{{ item.texto }}</a>
+		{% endfor %}
+		<a class="btn gold" href="/contato/">Fale com nossa equipe <span aria-hidden="true">→</span></a>
+	</nav>
+</header>
