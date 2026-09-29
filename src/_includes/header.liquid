@@ -6,7 +6,7 @@
 	</a>
 	<nav>
 		{% for item in site.menu %}
-			<a href="{{ item.url }}">{{ item.texto }}</a>
+			<a href="{{ item.url | url }}">{{ item.texto }}</a>
 		{% endfor %}
 		<a class="btn gold" href="{{ '/contato/' | url }}">Fale com nossa equipe <span aria-hidden="true">→</span></a>
 	</nav>
