@@ -457,7 +457,7 @@ h1.page-title {
 }
 
 .inner-header {
-	background: var(--navy) url(/img/advogados.png) no-repeat right 30%;
+	background: var(--navy) url('../img/advogados.png') no-repeat right 30%;
 	background-size: cover;
 	background-blend-mode: difference;
 	padding: 40px 0;
