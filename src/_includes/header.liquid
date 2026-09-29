@@ -1,6 +1,6 @@
 <header>
-	<a class="logo" href="/" aria-label="Guimarães e Teixeira Advogados">
-		<img src="/img/simbolo-gt.svg" alt="GT" width="60">
+	<a class="logo" href="{{ '/' | url }}" aria-label="Guimarães e Teixeira Advogados">
+		<img src="{{'/img/simbolo-gt.svg' | url}}" alt="GT" width="60">
 		<span><b>GUIMARÃES E TEIXEIRA</b>
 		<small>ADVOGADOS ASSOCIADOS</small></span>
 	</a>
@@ -8,6 +8,6 @@
 		{% for item in site.menu %}
 			<a href="{{ item.url }}">{{ item.texto }}</a>
 		{% endfor %}
-		<a class="btn gold" href="/contato/">Fale com nossa equipe <span aria-hidden="true">→</span></a>
+		<a class="btn gold" href="{{ '/contato/' | url }}">Fale com nossa equipe <span aria-hidden="true">→</span></a>
 	</nav>
 </header>

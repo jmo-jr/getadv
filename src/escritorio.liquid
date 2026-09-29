@@ -19,8 +19,8 @@ layout: base.liquid
 				<p>O <strong>Guimarães e Teixeira Advogados</strong> é um escritório com atuação especializada em <strong>Direito da Saúde, Direito Sanitário e Regulatório</strong>, com presença estratégica em Brasília e Goiânia e atuação em todo o território nacional.</p> 
 				<p>O escritório assessora empresas, hospitais, instituições de saúde e clientes privados em demandas judiciais, administrativas e consultivas que exigem elevado grau de especialização técnica, especialmente em matérias relacionadas à regulação sanitária, relações contratuais com o SUS, judicialização da saúde e atuação perante órgãos públicos e agências reguladoras.</p>
 			</div>
-			<div class="image-container">
-				<img src="/img/fachada.png" alt="" class="figure" width="100%">
+			<div class="image-container" style="width:35%">
+				<img src="{{'/img/fachada.png' | url}}" alt="" class="figure" width="100%">
 			</div>
 		</section>
 
@@ -37,7 +37,7 @@ layout: base.liquid
 			
 			<div class="d-flex align-items-center gap-sm">
 				<div class="image-container second">
-					<img src="/img/salareuniao.png" alt="" class="figure" width="400">
+					<img src="{{'/img/salareuniao.png' | url}}" alt="" class="figure" width="400">
 				</div>
 				
 				<div>
@@ -65,10 +65,10 @@ layout: base.liquid
 			</div>
 			
 			<div class="selos">
-					<img src="/img/selo-escritorio.png">
-					<img src="/img/selo-advogado.png">
-					<img src="/img/selo_carlos.png">
-					<img src="/img/selo_gtadv.png">
+					<img src="{{'/img/selo-escritorio.png' | url}}">
+					<img src="{{'/img/selo-advogado.png' | url}}">
+					<img src="{{'/img/selo_carlos.png' | url}}">
+					<img src="{{'/img/selo_gtadv.png' | url}}">
 			</div>
 		</section>
 
@@ -77,6 +77,12 @@ layout: base.liquid
 
 			<p>O escritório tem como compromisso oferecer uma advocacia técnica, próxima e estratégica, pautada pela ética, pela segurança jurídica e pela construção de soluções adequadas à realidade de cada cliente.</p>
 			<p>Mais do que atuar em processos, buscamos compreender o contexto de cada demanda e desenvolver estratégias jurídicas capazes de enfrentar questões complexas de forma objetiva, responsável e eficiente.</p>
+		</section>
+
+		<section>
+			<button class="btn cta" type="button">
+				<a href="{{ '/img/FOLDER GTADV.pdf' | url }}" target="_blank">Baixe nosso prospecto</a>
+			</button>
 		</section>
 
 	</div> 	

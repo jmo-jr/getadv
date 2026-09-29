@@ -191,9 +191,10 @@ nav a:hover {
   min-height: 570px;
   color: #fff;
 	background-color: var(--navy2);
-	background-image: url(/img/congresso-entardecer.png);
+	background-image: url('../img/congresso-entardecer.png');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position-y: center;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -546,12 +547,24 @@ h1.page-title {
 }
 
 .photo {
-	border: solid 2px var(--gold);
+	border: solid 6px var(--gold);
 	align-self: flex-start;
 
 	& img {
 		width: 300px;
 	}
+}
+
+.btn.cta {
+    border: solid 4px var(--gold);
+    border-radius: 16px;
+    background: var(--blue);
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    letter-spacing: 6%;
+    margin: 40px auto 0;
 }
 
 @media screen and (max-width: 768px) {
