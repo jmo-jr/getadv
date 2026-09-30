@@ -10,6 +10,6 @@ export default function (eleventyConfig) {
       input: "src",
       output: "dist"
     },
-		pathPrefix: "/getadv/"
+		// pathPrefix: "/getadv/"
   };
 }

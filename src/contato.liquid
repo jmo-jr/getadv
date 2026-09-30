@@ -17,7 +17,7 @@ layout: base.liquid
 
 		<div class="d-flex flex-wrap justify-content-between gap-lg">
 
-			<form action="send_mail.php" method="POST" enctype="multipart/form-data" style="flex:1">
+			<form action="{{ '/send_mail.php' | url }}" method="POST" enctype="multipart/form-data" style="flex:1">
 
 				<div class="row mb-3 mt-3">
 					<div class="col-sm-12 col-md-6">
@@ -59,7 +59,13 @@ layout: base.liquid
 				</div>
 				
 				<div class="row">
-					<div class="col-12 mt-3">
+					<div class="col-3 mt-3">
+						<div class="form-group">
+							<label for="conta" class="form-label">Realize a operação<span class="required">*</span>: <b>7 x 7</b></label>
+							<input id="conta" name="conta" type="number" class="form-control" required>
+						</div>
+					</div>
+					<div class="col-9 mt-5" style="text-align:right">
 						<button type="submit" class="btn btn-primary">Enviar</button>
 					</div>
 				</div>
