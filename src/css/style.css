@@ -19,24 +19,6 @@
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #0f1626;
-    --ink: #eee8db;
-    --muted: #9aa3b2;
-    --line: #27314a;
-    --bg: #0f1626;
-  }
-}
-
-:root[data-theme="dark"] {
-  --paper: #0f1626;
-  --ink: #eee8db;
-  --muted: #9aa3b2;
-  --line: #27314a;
-  --bg: #0f1626;
-}
-
 html {
   scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 80px);
   scroll-behavior: smooth;
@@ -76,12 +58,7 @@ header {
   z-index: 10;
   background: white;
   border-bottom: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
   padding: 14px 32px;
-  color: var(--paper);
 }
 
 .gap-sm { gap: 8px }
@@ -148,6 +125,7 @@ nav {
   gap: 28px;
   font-size: 16px;
   font-weight: 400;
+	justify-content: space-between !important;
 }
 
 nav a:hover {
@@ -164,6 +142,11 @@ nav a:hover {
   border: 1px solid transparent;
 	border-radius: 4px;
   transition: background 0.2s;
+}
+
+.navbar-collapse {
+		flex-grow: 0;
+		gap: 40px;
 }
 
 .gold {
@@ -293,7 +276,7 @@ h1.page-title {
 .area svg {
   width: 52px;
   height: 52px;
-  stroke: var(--paper);
+  stroke: var(--navy);
   fill: none;
   stroke-width: 1.6;
   stroke-linecap: round;
@@ -312,7 +295,7 @@ h1.page-title {
 .area p {
   margin: 0;
   font-size: 14px;
-  color: var(--paper);
+  color: var(--navy);
   line-height: 1.45;
 }
 
@@ -372,11 +355,14 @@ h1.page-title {
   line-height: 1.35;
 }
 
-@media (max-width: 1100px) {
-  nav a:not(.btn) {
-    display: none;
-  }
+.role {
+	color: rgb(14 28 51 / 70%);
+	font-size: 22px;
+	font-weight: 400;
+	margin-bottom: 24px;
+}
 
+@media (max-width: 1100px) {
   .areas {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 32px;
@@ -392,10 +378,35 @@ h1.page-title {
 }
 
 @media (max-width: 700px) {
-  header .btn {
-    display: none;
+  header {
+    padding: 0;
   }
+	.navbar {
+		padding: 12px 24px;
+		gap: 12px;
+	}
+	.navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 18px;
+    padding: 24px 0;
+	}
+	.navbar-toggler {
+		margin: 0 auto;
+		border: none;
 
+		&:focus:not(:focus-visible) {
+			outline: 0;
+			background: var(--blue);
+			box-shadow: none;
+			
+			& .navbar-toggler-icon {
+				filter: invert(1);
+			}
+		}
+
+	}
   .mono {
     font-size: 44px;
   }
@@ -427,6 +438,7 @@ h1.page-title {
 
   .hero {
     min-height: 520px;
+		background-position-x: 60%;
   }
 }
 
@@ -461,7 +473,7 @@ h1.page-title {
 	background-size: cover;
 	background-blend-mode: difference;
 	padding: 40px 0;
-	margin-bottom: 24px;
+	margin-bottom: 40px;
 
 	& h2 {
 		color: white;
@@ -471,11 +483,17 @@ h1.page-title {
 }
 
 .image-container {
-	width: 50%
+	width: 40%
+}
+.image-container.first {
+	align-content: flex-start;
 }
 .image-container.second {
 	margin-right: 24px;
-	float: left;
+
+	& .figure {
+		width: 400px;
+	}
 }
 
 /* Footer */
@@ -570,11 +588,11 @@ h1.page-title {
 @media screen and (max-width: 768px) {
 
 	.nav-link {
-        text-align: center;
+		text-align: center;
 	}
 
-	.navbar {
-		padding: 8px 16px;
+	.flex-wrap-mobile {
+		flex-wrap: wrap;
 	}
 
 	.top-img {
@@ -582,12 +600,16 @@ h1.page-title {
 		height: 200px;
 	}
 
-	.main-content {
-		padding: 24px 16px;
+	.container {
+		padding: 0 32px;
 	}
 
 	.image-container {
 		width: 100%;
+
+		& .figure {
+        width: 100% !important;
+    }
 	}
 
 	h3.headline-md {
@@ -595,7 +617,8 @@ h1.page-title {
 	}
 	
 	.image-container.second {
-        margin-bottom: 20px;
+		margin-bottom: 20px;
+		margin-right: 0;
 	}
 
 	.copy, .footer-logo {
@@ -603,7 +626,7 @@ h1.page-title {
 	}
 
 	.main-footer {
-        padding: 30px;
+		padding: 30px;
 	}
 
 	.footer-logo {
@@ -617,18 +640,19 @@ h1.page-title {
 
 	.change-mobile {
 		justify-content: center;
-        gap: 4px;
-        margin-top: 24px;
+		gap: 4px;
+		margin-top: 24px;
 	}
 	
 	#excelencia {
-        margin-top: 0;
-    }
+		margin-top: 0;
+	}
 	
 	.selos {
-        flex-direction: row;
-        margin-top: 0;
-        width: 100%;
+		flex-direction: row;
+		margin-top: 0;
+		width: 100%;
+		gap: 8px;
 	}
 
 }

@@ -1,13 +1,24 @@
 <header>
-	<a class="logo" href="{{ '/' | url }}" aria-label="Guimarães e Teixeira Advogados">
-		<img src="{{'/img/simbolo-gt.svg' | url}}" alt="GT" width="60">
-		<span><b>GUIMARÃES E TEIXEIRA</b>
-		<small>ADVOGADOS ASSOCIADOS</small></span>
-	</a>
-	<nav>
-		{% for item in site.menu %}
-			<a href="{{ item.url | url }}">{{ item.texto }}</a>
-		{% endfor %}
-		<a class="btn gold" href="{{ '/contato/' | url }}">Fale com nossa equipe <span aria-hidden="true">→</span></a>
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<a class="navbar-brand logo" href="{{ '/' | url }}" aria-label="Guimarães e Teixeira Advogados">
+			<img src="{{'/img/simbolo-gt.svg' | url}}" alt="GT" width="60">
+			<span><b>GUIMARÃES E TEIXEIRA</b>
+			<small>ADVOGADOS ASSOCIADOS</small></span>
+		</a>
+		<button class="navbar-toggler" type="button" 
+			data-bs-toggle="collapse" 
+			data-bs-target="#navbarBasic" 
+			aria-controls="navbarBasic" 
+			aria-expanded="false" 
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="navbar-collapse collapse" id="navbarBasic">
+			{% for item in site.menu %}
+				<a href="{{ item.url | url }}">{{ item.texto }}</a>
+			{% endfor %}
+			<a class="btn gold" href="{{ '/contato/' | url }}">Fale com nossa equipe <span aria-hidden="true">→</span></a>
+		</div>
 	</nav>
 </header>
