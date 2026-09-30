@@ -502,7 +502,7 @@ h1.page-title {
 	font-size: 14px;
 	font-weight: 400;
 	border-bottom: solid 10px var(--blue);
-	background: var(--bg);
+	background: var(--navy);
 	color: white;
 
 	.container {
